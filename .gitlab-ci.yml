@@ -1,0 +1,34 @@
+.specs: &specs
+  cache:
+    paths:
+      - vendor/ruby
+  before_script:
+    - apt update
+    - apt install python-pip -y
+    - pip install docutils
+    - bundle install --jobs $(nproc)
+  script:
+    - bundle exec rake test
+
+ruby-20:
+  image: ruby:2.0
+  <<: *specs
+ruby-21:
+  image: ruby:2.1
+  <<: *specs
+ruby-22:
+  image: ruby:2.2
+  <<: *specs
+ruby-23:
+  image: ruby:2.3
+  <<: *specs
+jruby-17:
+  image: jruby:1.7
+  <<: *specs
+  variables:
+    JRUBY_OPTS: "-Xcext.enabled=true--1.9"
+jruby-9:
+  image: jruby:9.1
+  <<: *specs
+  variables:
+    JRUBY_OPTS: "-Xcext.enabled=true"
