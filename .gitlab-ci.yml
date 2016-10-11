@@ -25,13 +25,3 @@ ruby-22:
 ruby-23:
   image: ruby:2.3
   <<: *specs
-jruby-17:
-  image: jruby:1.7
-  <<: *specs
-  variables:
-    JRUBY_OPTS: "-Xcext.enabled=true,--1.9"
-  allow_failure: true
-jruby-9:
-  image: jruby:9.1
-  <<: *specs
-  allow_failure: true
