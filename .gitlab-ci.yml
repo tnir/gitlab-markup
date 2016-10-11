@@ -1,3 +1,6 @@
+variables:
+  LANG: "C.UTF-8"
+
 .specs: &specs
   cache:
     paths:
