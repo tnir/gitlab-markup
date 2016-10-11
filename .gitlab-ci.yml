@@ -7,7 +7,7 @@ variables:
       - vendor/ruby
   before_script:
     - apt update
-    - apt install python-pip -y
+    - apt install python-pip git build-essential -y
     - pip install docutils
     - bundle install --jobs $(nproc)
   script:
@@ -29,9 +29,9 @@ jruby-17:
   image: jruby:1.7
   <<: *specs
   variables:
-    JRUBY_OPTS: "-Xcext.enabled=true--1.9"
+    JRUBY_OPTS: "-Xcext.enabled=true,--1.9"
+  allow_failure: true
 jruby-9:
   image: jruby:9.1
   <<: *specs
-  variables:
-    JRUBY_OPTS: "-Xcext.enabled=true"
+  allow_failure: true
