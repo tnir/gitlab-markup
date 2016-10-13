@@ -1,8 +1,9 @@
-## 1.4.0 (TO BE RELEASED)
+## 1.5.0 (2016-10-13)
 
 * GitLab CI support
 * Fixed `.pod` test files to use newer syntax.
 * Changes to support Python 3 (it's not out-of-the box yet, you still need to patch code)
+* Gem published as 'gitlab-markup'
 
 ## 1.3.3 (2015-02-17)
 

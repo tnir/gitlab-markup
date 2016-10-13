@@ -1,6 +1,8 @@
 GitHub Markup
 =============
 
+[![build status](https://gitlab.com/gitlab-org/gitlab-markup/badges/master/build.svg)](https://gitlab.com/gitlab-org/gitlab-markup/commits/master)
+
 This library is the first step of a journey that every markup file in a repository goes on before it is rendered on GitHub.com:
 
 0. This library converts the raw markup to HTML. See the list of [supported markup formats](#markups) below.
