@@ -1,3 +1,7 @@
+## 1.5.1 (2017-01-09)
+
+* Disable rendering from `.. raw::` content block
+
 ## 1.5.0 (2016-10-13)
 
 * GitLab CI support

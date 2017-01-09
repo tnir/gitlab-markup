@@ -25,7 +25,7 @@ this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 __author__ = "Jannis Leidel"
 __license__ = "CC0"
-__version__ = "0.1"
+__version__ = "0.2"
 
 import sys
 import os
@@ -56,7 +56,7 @@ from docutils.writers.html4css1 import Writer, HTMLTranslator
 SETTINGS = {
     'cloak_email_addresses': False,
     'file_insertion_enabled': False,
-    'raw_enabled': True,
+    'raw_enabled': False,
     'strip_comments': True,
     'doctitle_xform': True,
     'sectsubtitle_xform': True,
