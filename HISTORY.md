@@ -1,3 +1,7 @@
+## 1.6.0
+
+* Updated docutils support (now requires 0.13.1)
+
 ## 1.5.1 (2017-01-09)
 
 * Disable rendering from `.. raw::` content block
