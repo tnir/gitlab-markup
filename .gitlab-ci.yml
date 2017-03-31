@@ -8,7 +8,7 @@ variables:
   before_script:
     - apt update
     - apt install python-pip git build-essential -y
-    - pip install 'docutils==0.12'
+    - pip install 'docutils==0.13.1'
     - bundle install --jobs $(nproc)
   script:
     - bundle exec rake test
