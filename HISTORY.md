@@ -1,4 +1,4 @@
-## 1.6.0
+## 1.6.0 (2017-05-01)
 
 * Updated docutils support (now requires 0.13.1)
 
