@@ -13,9 +13,6 @@ variables:
   script:
     - bundle exec rake test
 
-ruby-20:
-  image: ruby:2.0
-  <<: *specs
 ruby-21:
   image: ruby:2.1
   <<: *specs
