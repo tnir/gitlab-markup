@@ -1,4 +1,4 @@
-## 1.6.1 (2017-09-20)
+## 1.6.2 (2017-09-20)
 
 * Support PlantUML blocks in reStructuredText
 
