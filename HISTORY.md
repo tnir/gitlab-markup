@@ -1,3 +1,7 @@
+## 1.6.1 (2017-09-20)
+
+* Support PlantUML blocks in reStructuredText
+
 ## 1.6.0 (2017-05-01)
 
 * Updated docutils support (now requires 0.13.1)
