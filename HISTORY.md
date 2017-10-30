@@ -1,3 +1,7 @@
+## 1.6.3 (2017-10-30)
+
+* Support PlantUML caption option and `uml::` directive
+
 ## 1.6.2 (2017-09-20)
 
 * Support PlantUML blocks in reStructuredText
