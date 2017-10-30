@@ -73,7 +73,17 @@ someone@somewhere.org
 
 Press :kbd:`Ctrl+C` to quit
 
-
 .. raw:: html
 
     <p><strong>RAW HTML!</strong></p><style> p {color:blue;} </style>
+
+.. plantuml::
+   :caption: Caption with **bold** and *italic*
+
+   Bob -> Alice: hello
+   Alice -> Bob: Go Away
+
+.. uml::
+
+   Bob -> Alice: hello
+   Alice -> Bob: Go Away
