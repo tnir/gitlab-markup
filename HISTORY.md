@@ -1,3 +1,7 @@
+## 1.6.4 (2018-06-08)
+
+* Fixed extra blank line at start of rendered reStructuredText code block 
+
 ## 1.6.3 (2017-10-30)
 
 * Support PlantUML caption option and `uml::` directive
