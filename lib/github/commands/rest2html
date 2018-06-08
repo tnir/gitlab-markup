@@ -133,10 +133,10 @@ class GitHubHTMLTranslator(HTMLTranslator, object):
             language = classes[1]
             del classes[:]
             self.body.append(self.starttag(node, 'pre'))
-            self.body.append(self.starttag(node, 'code', lang=language))
+            self.body.append(self.starttag(node, 'code', suffix='', lang=language))
         else:
             self.body.append(self.starttag(node, 'pre'))
-            self.body.append(self.starttag(node, 'code'))
+            self.body.append(self.starttag(node, 'code', suffix=''))
 
     def depart_literal_block(self, node):
         self.body.append('</code>')

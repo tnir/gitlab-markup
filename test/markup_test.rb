@@ -21,8 +21,9 @@ def assert_html_equal(expected, actual, msg = nil)
       expected_doc = Nokogiri::HTML(expected) {|config| config.noblanks}
       actual_doc   = Nokogiri::HTML(actual) {|config| config.noblanks}
 
-      expected_doc.search('//text()').each {|node| node.content = normalize_html node.content}
-      actual_doc.search('//text()').each {|node| node.content = normalize_html node.content}
+      # Normalize content of text nodes, excluding preformatted nodes
+      expected_doc.search('//text()[not(ancestor::pre)]').each {|node| node.content = normalize_html node.content}
+      actual_doc.search('//text()[not(ancestor::pre)]').each {|node| node.content = normalize_html node.content}
 
       ignore_changes = {"+" => Regexp.union(/^\s*id=".*"\s*$/), "-" => nil}
       expected_doc.diff(actual_doc) do |change, node|
