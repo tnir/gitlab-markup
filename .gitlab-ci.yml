@@ -7,8 +7,8 @@ variables:
       - vendor/ruby
   before_script:
     - apt update
-    - apt install python3 python-pip git build-essential -y
-    - pip install 'docutils==0.13.1'
+    - apt install python3 python3-pip git build-essential -y
+    - pip3 install 'docutils==0.13.1'
     - bundle install --jobs $(nproc)
   script:
     - bundle exec rake test
