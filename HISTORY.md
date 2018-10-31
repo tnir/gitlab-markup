@@ -1,3 +1,7 @@
+## 1.6.5 (2018-10-31)
+
+* Renamed executable from `github-markup` to `gitlab-markup`
+
 ## 1.6.4 (2018-06-08)
 
 * Fixed extra blank line at start of rendered reStructuredText code block 
