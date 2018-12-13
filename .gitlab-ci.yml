@@ -9,17 +9,17 @@ variables:
     - apt update
     - apt install python3 python3-pip git build-essential -y
     - apt remove python -y
-    - pip3 install 'docutils==0.13.1'
+    - pip3 install 'docutils==0.14'
     - bundle install --jobs $(nproc)
   script:
     - bundle exec rake test
 
-ruby-21:
-  image: ruby:2.1
-  <<: *specs
-ruby-22:
-  image: ruby:2.2
-  <<: *specs
 ruby-23:
   image: ruby:2.3
+  <<: *specs
+ruby-24:
+  image: ruby:2.4
+  <<: *specs
+ruby-25:
+  image: ruby:2.5
   <<: *specs
