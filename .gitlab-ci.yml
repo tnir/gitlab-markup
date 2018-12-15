@@ -3,6 +3,7 @@ variables:
 
 .specs: &specs
   cache:
+    key: "$CI_JOB_NAME"
     paths:
       - vendor/ruby
   before_script:
@@ -13,12 +14,12 @@ variables:
   script:
     - bundle exec rake test
 
-ruby-21:
-  image: ruby:2.1
-  <<: *specs
-ruby-22:
-  image: ruby:2.2
-  <<: *specs
 ruby-23:
   image: ruby:2.3
   <<: *specs
+ruby-24:
+  <<: *specs
+  image: ruby:2.4
+ruby-25:
+  <<: *specs
+  image: ruby:2.5
