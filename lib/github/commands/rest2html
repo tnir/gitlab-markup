@@ -132,7 +132,7 @@ class GitHubHTMLTranslator(HTMLTranslator, object):
         if len(classes) >= 2 and classes[0] == 'code':
             language = classes[1]
             del classes[:]
-            self.body.append(self.starttag(node, 'pre'))
+            self.body.append(self.starttag(node, 'pre', CLASS='code'))
             self.body.append(self.starttag(node, 'code', suffix='', lang=language))
         else:
             self.body.append(self.starttag(node, 'pre'))
