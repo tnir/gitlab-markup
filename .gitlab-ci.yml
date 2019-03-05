@@ -8,8 +8,9 @@ variables:
       - vendor/ruby
   before_script:
     - apt update
-    - apt install python-pip git build-essential -y
-    - pip install 'docutils==0.13.1'
+    - apt install python3 python3-pip git build-essential -y
+    - apt remove python -y
+    - pip3 install 'docutils==0.14'
     - bundle install --jobs $(nproc)
   script:
     - bundle exec rake test
@@ -18,8 +19,8 @@ ruby-23:
   image: ruby:2.3
   <<: *specs
 ruby-24:
-  <<: *specs
   image: ruby:2.4
-ruby-25:
   <<: *specs
+ruby-25:
   image: ruby:2.5
+  <<: *specs

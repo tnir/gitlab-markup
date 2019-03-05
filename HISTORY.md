@@ -1,3 +1,7 @@
+## 1.7.0 (2019-03-05)
+
+* Require Python 3
+
 ## 1.6.5 (2018-10-31)
 
 * Renamed executable from `github-markup` to `gitlab-markup`

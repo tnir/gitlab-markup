@@ -33,7 +33,7 @@ markup(:asciidoctor, /adoc|asc(iidoc)?/) do |content|
 end
 
 command(
-  "python2 -S #{Shellwords.escape(File.dirname(__FILE__))}/commands/rest2html",
+  "python3 #{Shellwords.escape(File.dirname(__FILE__))}/commands/rest2html",
   /re?st(\.txt)?/,
   "restructuredtext"
 )
