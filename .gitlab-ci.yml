@@ -3,6 +3,7 @@ variables:
 
 .specs: &specs
   cache:
+    key: "$CI_JOB_NAME"
     paths:
       - vendor/ruby
   before_script:
