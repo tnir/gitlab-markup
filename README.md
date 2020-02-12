@@ -1,7 +1,7 @@
 GitLab Markup
 =============
 
-[![build status](https://gitlab.com/gitlab-org/gitlab-markup/badges/master/build.svg)](https://gitlab.com/gitlab-org/gitlab-markup/commits/master)
+[![build status](https://gitlab.com/gitlab-org/gitlab-markup/badges/master/pipeline.svg)](https://gitlab.com/gitlab-org/gitlab-markup/commits/master)
 
 This library is a fork of GitHub Markup, which is used to render all non Markdown markups:
 
