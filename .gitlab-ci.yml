@@ -1,5 +1,6 @@
 variables:
   LANG: "C.UTF-8"
+  DOCUTILS_VERSION: "0.14"
 
 .specs: &specs
   cache:
@@ -10,10 +11,17 @@ variables:
     - apt update
     - apt install python3 python3-pip git build-essential -y
     - apt remove python -y
-    - pip3 install 'docutils==0.14'
+    - pip3 install "docutils==$DOCUTILS_VERSION"
     - bundle install --jobs $(nproc)
   script:
     - bundle exec rake test
+
+.docutils-015:
+  variables:
+    DOCUTILS_VERSION: "0.15.2"
+.docutils-016:
+  variables:
+    DOCUTILS_VERSION: "0.16"
 
 ruby-24:
   image: ruby:2.4
@@ -26,4 +34,38 @@ ruby-26:
   <<: *specs
 ruby-27:
   image: ruby:2.7
+  <<: *specs
+
+ruby-24-du15:
+  image: ruby:2.4
+  extends: .docutils-015
+  <<: *specs
+ruby-25-du15:
+  image: ruby:2.5
+  extends: .docutils-015
+  <<: *specs
+ruby-26-du15:
+  image: ruby:2.6
+  extends: .docutils-015
+  <<: *specs
+ruby-27-du15:
+  image: ruby:2.7
+  extends: .docutils-015
+  <<: *specs
+
+ruby-24-du16:
+  image: ruby:2.4
+  extends: .docutils-016
+  <<: *specs
+ruby-25-du16:
+  image: ruby:2.5
+  extends: .docutils-016
+  <<: *specs
+ruby-26-du16:
+  image: ruby:2.6
+  extends: .docutils-016
+  <<: *specs
+ruby-27-du16:
+  image: ruby:2.7
+  extends: .docutils-016
   <<: *specs
