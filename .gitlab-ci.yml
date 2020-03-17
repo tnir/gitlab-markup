@@ -15,12 +15,15 @@ variables:
   script:
     - bundle exec rake test
 
-ruby-23:
-  image: ruby:2.3
-  <<: *specs
 ruby-24:
   image: ruby:2.4
   <<: *specs
 ruby-25:
   image: ruby:2.5
+  <<: *specs
+ruby-26:
+  image: ruby:2.6
+  <<: *specs
+ruby-27:
+  image: ruby:2.7
   <<: *specs
